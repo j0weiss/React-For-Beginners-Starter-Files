@@ -14,6 +14,10 @@ const Header = (props) => {
       <h3 className="tagline"><span>{ props.tagline }</span></h3>
     </header>
   )
-}
+};
+
+Header.propTypes = {
+    tagline: React.PropTypes.string.isRequired
+};
 
 export default Header;
