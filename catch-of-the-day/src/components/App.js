@@ -13,8 +13,8 @@ class App extends React.Component {
         super();
 
         this.addFish = this.addFish.bind(this);
-        this.addFish = this.addFish.bind(this);
         this.updateFish = this.updateFish.bind(this);
+        this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
 
         this.state = {
@@ -42,7 +42,6 @@ class App extends React.Component {
 
     componentWillUpdate(nextProps, nextState) {
         localStorage.setItem(`order-${ this.props.params.storeId }`, JSON.stringify(nextState.order) );
-
     }
 
     addFish(fish) {
